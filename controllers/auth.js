@@ -36,7 +36,7 @@ const signup = (req, res) => {
 
                 console.log(token);
                 res.cookie("jwt", token);
-                res.redirect(`/users/profile/${newUser.id}`);
+                res.redirect(`/users/profile`);
             })
         })
     })
@@ -69,7 +69,7 @@ const login = (req, res) => {
                     );
                     console.log(token);
                     res.cookie("jwt", token)
-                    res.redirect(`/users/profile/${foundUser.id}`);
+                    res.redirect(`/users/profile`);
                 } else{
                     res.send('Incorrect Password')
                 }
