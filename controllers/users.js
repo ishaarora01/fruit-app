@@ -35,7 +35,7 @@ const editProfile = (req, res) => {
 
 const deleteUser = (req, res) => {
     User.destroy({
-        where: {id: req.params.index}
+        where: {id: req.user.id}
     })
     .then(() => {
         res.redirect('/users');
