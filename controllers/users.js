@@ -38,7 +38,7 @@ const deleteUser = (req, res) => {
         where: {id: req.user.id}
     })
     .then(() => {
-        res.redirect('/users');
+        res.redirect('/');
     })
 }
 
